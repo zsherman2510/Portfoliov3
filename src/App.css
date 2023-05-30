@@ -1,9 +1,19 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 #navigation-color {
   background-color: #FFA500;
+}
+.main {
+  padding: 0 20px;
+  flex: 1;
 }
 
 .logo {
@@ -51,6 +61,47 @@
   color: #00E8D5;
 }
 
+.resume {
+  margin-right: 10px;
+}
+
+/* Hero */
+
+.hero {
+  margin: 15px auto;
+  height: 30vh;
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.hero .heading {
+  color: #00E8D5;
+}
+
+.hero .subheader{
+  color: #eff;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.hero .subheader.grey {
+  color: #888;
+  font-size: 3em;
+}
+
+.hero .info {
+  color: #757575;
+  font-weight: bold;
+}
+
+.amex {
+  color: #4DB6AC;
+
+
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import Hero from './UIComponents/Hero'
 import './App.css'
 
 function App() {
@@ -7,7 +7,10 @@ function App() {
 
   return (
     <>
-      <div>hello</div>
+    <div className="main">
+      <Hero />
+    </div>
+      
     </>
   )
 }
