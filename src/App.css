@@ -79,6 +79,8 @@
 
 .hero .heading {
   color: #00E8D5;
+  font-size: 1.7rem;
+  margin-bottom: 40px;
 }
 
 .hero .subheader{
@@ -90,11 +92,13 @@
 .hero .subheader.grey {
   color: #888;
   font-size: 3em;
+  margin-bottom: 35px;
 }
 
 .hero .info {
   color: #757575;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .amex {
@@ -119,6 +123,17 @@
 
 .card {
   padding: 2em;
+}
+
+.cta {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.mailTo:hover{
+  background: #4DB6AC;
+  color: #fff;
+  cursor: pointer;
 }
 
 .read-the-docs {
