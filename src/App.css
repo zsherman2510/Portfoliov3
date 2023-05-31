@@ -68,9 +68,7 @@
 /* Hero */
 
 .hero {
-  margin: 15px auto;
-  height: 30vh;
-  width: 66%;
+  margin-top: 35px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -85,13 +83,12 @@
 
 .hero .subheader{
   color: #eff;
-  font-size: 3em;
   font-weight: bold;
 }
 
 .hero .subheader.grey {
   color: #888;
-  font-size: 3em;
+
   margin-bottom: 35px;
 }
 
@@ -103,8 +100,27 @@
 
 .amex {
   color: #4DB6AC;
+}
 
+.category {
+  display: flex;
+}
 
+.categoryHeader {
+  flex-shrink: 0;
+    width: 200px;
+    margin-right: 70px;
+    color: #007bff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.categoryBody {
+  font-weight: 300;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 650px;
 }
 @keyframes logo-spin {
   from {
@@ -138,4 +154,35 @@
 
 .read-the-docs {
   color: #888;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #555;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #333;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+.stack .stack-items .item {
+  color: #afafaf;
+}
+.position {
+  color: #4DB6AC;
+  font-size: .9rem;
+}
+
+.timeLine {
+  color: #afafaf;
 }

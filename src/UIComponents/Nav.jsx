@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const Navigation = () => {
   return (
     <nav style={styles.nav}>
-      <div style={styles.logo}>Logo</div>
+      <div style={styles.logo}></div>
       <ul style={styles.navList}>
-        <li className='nav-link'>
+        {/* <li className='nav-link'>
           <Link to="/">Home</Link>
         </li>
         <li className='nav-link' >
@@ -17,7 +17,7 @@ const Navigation = () => {
         </li>
         <li className='nav-link'>
           <Link to="/contact">Contact</Link>
-        </li>
+        </li> */}
         <li className='resume'>
             <a className='outline-button' href="/Resume2023PDF.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         </li>
