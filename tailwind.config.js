@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./UIComponents/**/*.{html,jsx,js}"],
+  content: ["./Src/**/*.{html,jsx,js}"],
   theme: {
     fontSize: {
       sm: '0.8rem',
