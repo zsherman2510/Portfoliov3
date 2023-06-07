@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="subheader text-lg md:text-2xl">I'm Zavion Sherman.</div>
       <div className="subheader grey text-md md:text-xl">I build things for the web.</div>
       <div className="info">I'm a <span className='amex'>software engineer</span> specializing in building exceptional digital experiences and crafting innovative solutions through code and creativity</div>
-      <div className="cta">Get in touch 👉🏾 <a className='mailTo'>shermanzavion@gmail.com</a></div>
+      <div className="cta">Get in touch 👉🏾 <a className='mailTo' href='mailto:shermanzavion@gmail.com'>shermanzavion@gmail.com</a></div>
     </div>
   )
 }
