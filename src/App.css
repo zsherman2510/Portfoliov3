@@ -187,3 +187,8 @@
 .timeLine {
   color: #afafaf;
 }
+
+.skill-icon {
+  font-size: 2rem; /* Adjust size as needed */
+  margin-bottom: 10px;
+}
