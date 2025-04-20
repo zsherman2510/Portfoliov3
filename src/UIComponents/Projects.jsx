@@ -1,9 +1,7 @@
 // Projects.js
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import epicstart from "/epicstart.png";
 import socialgo from "/socialgo.png";
-import shortaiscripts from "/shortaiscripts.png";
 import shopthemes from "/shopthemes.png";
 import { motion } from "framer-motion";
 
@@ -30,28 +28,6 @@ const Projects = () => {
       ],
     },
     {
-      title: "ShortAIScripts",
-      description:
-        "A platform that allows users to create and share AI scripts. This project demonstrates my proficiency in Next.js, SQL, email services and many more.",
-      imageUrl: shortaiscripts,
-      projectUrl: "https://shortaiscripts.com",
-      tags: [
-        "Next.js",
-        "OpenAI",
-        "PostgreSQL",
-        "OpenAI",
-        "Stability AI",
-        "Runway ML",
-        "Vercel",
-        "Stripe",
-        "Email Services",
-        "Redis",
-        "Cloudflare",
-        "Digital Ocean",
-        "Supabase",
-      ],
-    },
-    {
       title: "Shop-Themes",
       description:
         "A platform that sells digital products. This project demonstrates my proficiency in Next.js, SQL, email services and many more.",
@@ -66,22 +42,6 @@ const Projects = () => {
         "OpenAI",
         "Email Services",
         "Digital Ocean",
-      ],
-    },
-    {
-      title: "EpicStart",
-      description:
-        "An idea validation platform that helps entrepreneurs validate their SaaS ideas and doing preliminary market research. This project demonstrates my proficiency in Next.js, SQL and many more technologies.",
-      imageUrl: epicstart,
-      projectUrl: "https://epicstart.ai",
-      slug: "epicstart",
-      tags: [
-        "Next.js",
-        "MongoDB",
-        "TypeScript",
-        "Tailwind",
-        "Digital Ocean",
-        "OpenAI",
       ],
     },
     // Add more projects as needed
