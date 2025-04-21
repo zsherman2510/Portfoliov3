@@ -7,7 +7,7 @@ const Navigation = () => {
         <div className="text-xl font-bold text-white">ZS</div>
         <div className="flex items-center gap-8">
           <a
-            href="/Resume2024.pdf"
+            href="/resume_2025_pdf.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2 rounded-full border border-white/20 text-white hover:bg-white/5 transition-all duration-300"
