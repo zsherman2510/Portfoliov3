@@ -23,189 +23,126 @@ const Skills = () => {
     {
       title: "Core Technologies",
       description: "My foundation and primary tools",
+      color: "brutal-red",
+      bgColor: "bg-brutal-red",
       skills: [
-        {
-          name: "TypeScript",
-          icon: <SiTypescript color="#3178C6" />,
-          level: "Advanced",
-        },
-        {
-          name: "JavaScript",
-          icon: <FaJs color="#F7DF1E" />,
-          level: "Advanced",
-        },
-        {
-          name: "React",
-          icon: <FaReact color="#61DAFB" />,
-          level: "Advanced",
-        },
-        {
-          name: "Next.js",
-          icon: <SiNextdotjs color="#FFFFFF" />,
-          level: "Advanced",
-        },
+        { name: "TypeScript", icon: SiTypescript, level: "Advanced" },
+        { name: "JavaScript", icon: FaJs, level: "Advanced" },
+        { name: "React", icon: FaReact, level: "Advanced" },
+        { name: "Next.js", icon: SiNextdotjs, level: "Advanced" },
       ],
     },
     {
       title: "Backend & API",
       description: "Building robust and scalable systems",
+      color: "brutal-blue",
+      bgColor: "bg-brutal-blue",
       skills: [
-        {
-          name: "RESTful APIs",
-          icon: <FaServer color="#FF6B6B" />,
-          level: "Expert",
-        },
-        {
-          name: "Node.js",
-          icon: <FaNode color="#339933" />,
-          level: "Advanced",
-        },
-        {
-          name: "SQL",
-          icon: <DiMsqlServer color="#CC2927" />,
-          level: "Advanced",
-        },
-        {
-          name: "Database Design",
-          icon: <FaDatabase color="#4479A1" />,
-          level: "Advanced",
-        },
-        {
-          name: "Postman",
-          icon: <SiPostman color="#FF6C37" />,
-          level: "Expert",
-        },
+        { name: "RESTful APIs", icon: FaServer, level: "Expert" },
+        { name: "Node.js", icon: FaNode, level: "Advanced" },
+        { name: "SQL", icon: DiMsqlServer, level: "Advanced" },
+        { name: "Database Design", icon: FaDatabase, level: "Advanced" },
+        { name: "Postman", icon: SiPostman, level: "Expert" },
       ],
     },
     {
       title: "AI & Automation",
       description: "Leveraging AI for enhanced development",
+      color: "brutal-purple",
+      bgColor: "bg-brutal-purple",
       skills: [
-        {
-          name: "OpenAI",
-          icon: <SiOpenai color="#00A67E" />,
-          level: "Expert",
-        },
-        {
-          name: "Anthropic",
-          icon: <SiAnthropic color="#7F7F7F" />,
-          level: "Expert",
-        },
-        {
-          name: "Prompt Engineering",
-          icon: <FaBrain color="#FF6B6B" />,
-          level: "Advanced",
-        },
-        {
-          name: "AI Integration",
-          icon: <FaRobot color="#4A90E2" />,
-          level: "Advanced",
-        },
+        { name: "OpenAI", icon: SiOpenai, level: "Expert" },
+        { name: "Anthropic", icon: SiAnthropic, level: "Expert" },
+        { name: "Prompt Engineering", icon: FaBrain, level: "Advanced" },
+        { name: "AI Integration", icon: FaRobot, level: "Advanced" },
       ],
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 20 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 0.2,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-20 px-4 overflow-hidden bg-black">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-gray-900 via-gray-900 to-black" />
-
-      {/* Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-
-      {/* Radial Gradient Overlay */}
-      <div className="absolute inset-0 bg-black [mask-image:radial-gradient(900px_circle_at_center,transparent_30%,black)]" />
-
-      <div className="container relative z-10 mx-auto">
+    <section id="skills" className="brutal-section bg-brutal-cream">
+      <div className="brutal-container">
+        {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-500 mb-4">
-            Technical Expertise
+          <h2 className="brutal-h2 mb-4">
+            Technical
+            <span className="bg-brutal-yellow px-3 ml-3 border-4 border-brutal-black inline-block -rotate-1">
+              Expertise
+            </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="brutal-body-lg max-w-2xl">
             Specializing in modern web development, API design, and AI
             integration to build powerful, scalable applications.
           </p>
         </motion.div>
 
-        <div className="space-y-16">
+        {/* Skill Categories */}
+        <div className="space-y-20">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+              initial={{ opacity: 0, x: categoryIndex % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3 }}
               viewport={{ once: true }}
             >
-              <div className="mb-8">
-                <h3 className="text-2xl font-semibold text-white mb-2">
+              {/* Category Header */}
+              <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8">
+                <motion.div
+                  className={`${category.bgColor} text-white px-6 py-3
+                             border-4 border-brutal-black shadow-brutal
+                             font-heading font-bold text-xl uppercase inline-block`}
+                  whileHover={{ rotate: -2, y: -2 }}
+                  transition={{ duration: 0.1 }}
+                >
                   {category.title}
-                </h3>
-                <p className="text-gray-400">{category.description}</p>
+                </motion.div>
+                <p className="brutal-body text-brutal-charcoal">
+                  {category.description}
+                </p>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {category.skills.map((skill, index) => (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{
-                      duration: 0.3,
-                      delay: index * 0.1,
-                      type: "spring",
-                      stiffness: 100,
-                    }}
-                    viewport={{ once: true }}
-                    className="group relative bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-sm rounded-2xl p-6 transition-all duration-300"
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="flex items-center gap-4 mb-4">
-                      <motion.span
-                        className="text-3xl"
-                        whileHover={{ scale: 1.2, rotate: 5 }}
-                        transition={{ type: "spring", stiffness: 400 }}
-                      >
-                        {skill.icon}
-                      </motion.span>
-                      <span className="text-gray-200 font-medium">
-                        {skill.name}
-                      </span>
-                    </div>
-
-                    <div className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-xs text-gray-500 font-medium">
-                          {skill.level}
-                        </span>
-                        <span className="text-xs text-gray-500 font-medium">
-                          {getPercentageForLevel(skill.level)}%
-                        </span>
-                      </div>
-                      <div className="h-1.5 bg-white/[0.03] rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{
-                            width: `${getPercentageForLevel(skill.level)}%`,
-                          }}
-                          transition={{
-                            duration: 1,
-                            ease: "easeOut",
-                            delay: index * 0.1,
-                          }}
-                          viewport={{ once: true }}
-                          className="h-full bg-gradient-to-r from-white/20 via-white/30 to-white/40 rounded-full"
-                        />
-                      </div>
-                    </div>
-                  </motion.div>
+              {/* Skills Grid */}
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"
+              >
+                {category.skills.map((skill) => (
+                  <SkillCard key={skill.name} skill={skill} variants={itemVariants} />
                 ))}
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
@@ -214,17 +151,50 @@ const Skills = () => {
   );
 };
 
-const getPercentageForLevel = (level) => {
-  switch (level) {
-    case "Expert":
-      return 95;
-    case "Advanced":
-      return 85;
-    case "Proficient":
-      return 75;
-    default:
-      return 60;
-  }
+const SkillCard = ({ skill, variants }) => {
+  const IconComponent = skill.icon;
+
+  return (
+    <motion.div
+      variants={variants}
+      className="bg-white border-4 border-brutal-black shadow-brutal p-5
+                 hover:shadow-brutal-lg hover:-translate-x-1 hover:-translate-y-1
+                 transition-all duration-150 cursor-default"
+      whileHover="hover"
+    >
+      {/* Icon */}
+      <motion.div
+        className="mb-4"
+        variants={{
+          hover: {
+            rotate: [0, -10, 10, -10, 0],
+            transition: { duration: 0.4 },
+          },
+        }}
+      >
+        <div className="w-12 h-12 bg-brutal-black flex items-center justify-center border-2 border-brutal-black">
+          <IconComponent className="w-6 h-6 text-white" />
+        </div>
+      </motion.div>
+
+      {/* Name */}
+      <h4 className="font-heading font-bold text-brutal-black text-sm uppercase mb-3">
+        {skill.name}
+      </h4>
+
+      {/* Level Badge */}
+      <div
+        className={`inline-block px-2 py-1 text-xs font-bold uppercase
+                   border-2 border-brutal-black font-mono
+                   ${skill.level === "Expert"
+                     ? "bg-brutal-yellow text-brutal-black"
+                     : "bg-white text-brutal-black"
+                   }`}
+      >
+        {skill.level}
+      </div>
+    </motion.div>
+  );
 };
 
 export default Skills;

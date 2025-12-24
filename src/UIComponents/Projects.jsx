@@ -1,84 +1,87 @@
-// Projects.js
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import socialgo from "/socialgo.png";
-import shopthemes from "/shopthemes.png";
 import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = [
     {
-      title: "SocialGo",
+      number: "01",
+      title: "VidFarm",
       description:
-        "A social media management platform that helps businesses manage their social media accounts. This project demonstrates my proficiency in Next.js, SQL, email services and many more.",
-      imageUrl: socialgo,
-      projectUrl: "https://socialgo.cc",
-      slug: "socialgo",
+        "An AI-powered video content platform that helps creators generate, edit, and distribute video content at scale. Built with modern web technologies and integrated AI services.",
+      imageUrl: "/vidfarm.png",
+      projectUrl: "https://vidfarm.io",
       tags: [
         "Next.js",
-        "PostgreSQL",
+        "AI/ML",
+        "Video Processing",
         "OpenAI",
-        "Stability AI",
-        "Runway ML",
+        "PostgreSQL",
         "Vercel",
-        "Stripe",
-        "Email Services",
-        "Redis",
-        "Digital Ocean",
       ],
     },
     {
-      title: "Shop-Themes",
+      number: "02",
+      title: "Orca's Flow",
       description:
-        "A platform that sells digital products. This project demonstrates my proficiency in Next.js, SQL, email services and many more.",
-      imageUrl: shopthemes,
-      projectUrl: "https://shop-themes.com",
+        "A mobile app that delivers real-time options trading alerts and market insights. Features push notifications, customizable watchlists, and AI-powered trade analysis to help traders make informed decisions.",
+      imageUrl: "/orcasflow.png",
+      projectUrl: "https://orcasflow.com",
       tags: [
-        "Next.js",
-        "E-commerce",
-        "Stripe",
-        "React",
+        "React Native",
+        "Node.js",
+        "Push Notifications",
         "PostgreSQL",
-        "OpenAI",
-        "Email Services",
-        "Digital Ocean",
+        "Redis",
+        "AWS",
       ],
     },
-    // Add more projects as needed
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-20 px-4 overflow-hidden bg-black">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-gray-900 via-gray-900 to-black" />
-
-      {/* Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-
-      {/* Radial Gradient Overlay */}
-      <div className="absolute inset-0 bg-black [mask-image:radial-gradient(900px_circle_at_center,transparent_30%,black)]" />
-
-      <div className="container relative z-10 mx-auto">
+    <section id="projects" className="brutal-section bg-brutal-offwhite">
+      <div className="brutal-container">
+        {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-500 mb-4">
-            Featured Projects
+          <h2 className="brutal-h2 mb-4">
+            Featured
+            <span className="bg-brutal-blue text-white px-3 ml-3 border-4 border-brutal-black inline-block rotate-1">
+              Projects
+            </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="brutal-body-lg max-w-2xl">
             A selection of my recent work in web development and AI integration
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Projects Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+        >
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

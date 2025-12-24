@@ -3,31 +3,180 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 @layer base {
   body {
-    @apply bg-black text-white m-0 min-h-screen;
+    @apply bg-brutal-cream text-brutal-black m-0 min-h-screen antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
   }
 }
 
 @layer components {
-  .section-title {
-    @apply text-2xl font-bold text-white mb-8 relative inline-block;
+  /* Container */
+  .brutal-container {
+    @apply max-w-7xl mx-auto px-6 md:px-12 lg:px-16;
   }
 
-  .section-title::after {
-    content: '';
-    @apply absolute -bottom-2 left-0 w-1/2 h-0.5 bg-gradient-to-r from-white/50 to-transparent;
+  /* Section spacing */
+  .brutal-section {
+    @apply py-20 md:py-32;
+  }
+
+  /* Cards */
+  .brutal-card {
+    @apply bg-white border-4 border-brutal-black shadow-brutal transition-all duration-150;
+  }
+
+  .brutal-card-hover {
+    @apply brutal-card hover:shadow-brutal-lg hover:-translate-x-1 hover:-translate-y-1
+           active:shadow-brutal-active active:translate-x-0.5 active:translate-y-0.5;
+  }
+
+  .brutal-card-yellow {
+    @apply bg-brutal-yellow border-4 border-brutal-black shadow-brutal;
+  }
+
+  .brutal-card-blue {
+    @apply bg-brutal-blue border-4 border-brutal-black shadow-brutal text-white;
+  }
+
+  .brutal-card-red {
+    @apply bg-brutal-red border-4 border-brutal-black shadow-brutal text-white;
+  }
+
+  /* Buttons */
+  .brutal-btn {
+    @apply inline-flex items-center justify-center px-6 py-3
+           font-heading font-bold text-base uppercase tracking-wide
+           border-4 border-brutal-black shadow-brutal
+           transition-all duration-100 cursor-pointer select-none;
+  }
+
+  .brutal-btn-primary {
+    @apply brutal-btn bg-brutal-blue text-white
+           hover:shadow-brutal-lg hover:-translate-x-1 hover:-translate-y-1
+           active:shadow-brutal-active active:translate-x-0.5 active:translate-y-0.5;
+  }
+
+  .brutal-btn-secondary {
+    @apply brutal-btn bg-brutal-yellow text-brutal-black
+           hover:shadow-brutal-lg hover:-translate-x-1 hover:-translate-y-1
+           active:shadow-brutal-active active:translate-x-0.5 active:translate-y-0.5;
+  }
+
+  .brutal-btn-outline {
+    @apply brutal-btn bg-white text-brutal-black
+           hover:bg-brutal-yellow hover:shadow-brutal-lg hover:-translate-x-1 hover:-translate-y-1
+           active:shadow-brutal-active active:translate-x-0.5 active:translate-y-0.5;
+  }
+
+  .brutal-btn-ghost {
+    @apply brutal-btn bg-transparent text-brutal-black shadow-none
+           hover:bg-brutal-black hover:text-white;
+  }
+
+  .brutal-btn-lg {
+    @apply px-10 py-5 text-lg shadow-brutal-md
+           hover:shadow-brutal-xl;
+  }
+
+  /* Typography */
+  .brutal-h1 {
+    @apply font-heading text-6xl md:text-8xl lg:text-9xl font-bold
+           text-brutal-black uppercase tracking-tight leading-none;
+  }
+
+  .brutal-h2 {
+    @apply font-heading text-4xl md:text-5xl lg:text-6xl font-bold
+           text-brutal-black uppercase tracking-tight;
+  }
+
+  .brutal-h3 {
+    @apply font-heading text-2xl md:text-3xl font-bold
+           text-brutal-black uppercase;
+  }
+
+  .brutal-h4 {
+    @apply font-heading text-xl md:text-2xl font-bold text-brutal-black;
+  }
+
+  .brutal-body {
+    @apply font-body text-base text-brutal-charcoal leading-relaxed;
+  }
+
+  .brutal-body-lg {
+    @apply font-body text-lg md:text-xl text-brutal-charcoal leading-relaxed;
+  }
+
+  .brutal-label {
+    @apply font-heading text-sm font-bold uppercase tracking-widest;
+  }
+
+  /* Tags */
+  .brutal-tag {
+    @apply inline-block px-3 py-1 bg-brutal-yellow text-brutal-black
+           text-xs font-bold uppercase border-2 border-brutal-black;
+  }
+
+  .brutal-tag-outline {
+    @apply inline-block px-3 py-1 bg-white text-brutal-black
+           text-xs font-bold uppercase border-2 border-brutal-black;
+  }
+
+  /* Links */
+  .brutal-link {
+    @apply font-heading font-bold text-brutal-blue underline
+           decoration-2 underline-offset-4
+           hover:bg-brutal-yellow hover:text-brutal-black hover:no-underline
+           transition-colors duration-100 px-1;
+  }
+
+  /* Decorative elements */
+  .brutal-badge {
+    @apply inline-block px-4 py-2 bg-brutal-red text-white
+           font-heading font-bold uppercase text-sm
+           border-4 border-brutal-black shadow-brutal
+           transform -rotate-2;
+  }
+
+  /* Dividers */
+  .brutal-divider {
+    @apply w-full h-1 bg-brutal-black my-12;
+  }
+
+  .brutal-divider-pattern {
+    @apply w-full h-4 my-12;
+    background: repeating-linear-gradient(
+      45deg,
+      #1A1A1A,
+      #1A1A1A 10px,
+      #FEF08A 10px,
+      #FEF08A 20px
+    );
   }
 }
 
 @layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500;
+  /* Stacked shadow effect */
+  .brutal-stacked {
+    @apply relative;
+  }
+
+  .brutal-stacked::before {
+    content: '';
+    @apply absolute inset-0 bg-brutal-yellow border-4 border-brutal-black
+           translate-x-2 translate-y-2 -z-10 transition-transform duration-150;
+  }
+
+  .brutal-stacked:hover::before {
+    @apply translate-x-3 translate-y-3;
   }
 }
