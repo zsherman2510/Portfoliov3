@@ -1,42 +1,10 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
+import { projects } from "../data/projects";
 
 const Projects = () => {
-  const projects = [
-    {
-      number: "01",
-      title: "VidFarm",
-      description:
-        "An AI-powered video content platform that helps creators generate, edit, and distribute video content at scale. Built with modern web technologies and integrated AI services.",
-      imageUrl: "/vidfarm.png",
-      projectUrl: "https://vidfarm.io",
-      tags: [
-        "Next.js",
-        "AI/ML",
-        "Video Processing",
-        "OpenAI",
-        "PostgreSQL",
-        "Vercel",
-      ],
-    },
-    {
-      number: "02",
-      title: "Orca's Flow",
-      description:
-        "A mobile app that delivers real-time options trading alerts and market insights. Features push notifications, customizable watchlists, and AI-powered trade analysis to help traders make informed decisions.",
-      imageUrl: "/orcasflow.png",
-      projectUrl: "https://orcasflow.com",
-      tags: [
-        "React Native",
-        "Node.js",
-        "Push Notifications",
-        "PostgreSQL",
-        "Redis",
-        "AWS",
-      ],
-    },
-  ];
+  // projects are imported from shared data so cards and detail pages stay in sync
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -57,7 +25,7 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-16 text-center"
         >
           <h2 className="brutal-h2 mb-4">
             Featured
@@ -65,8 +33,8 @@ const Projects = () => {
               Projects
             </span>
           </h2>
-          <p className="brutal-body-lg max-w-2xl">
-            A selection of my recent work in web development and AI integration
+          <p className="brutal-body-lg max-w-2xl mx-auto">
+            recent work across trading, mobile apps, and agent assisted development
           </p>
         </motion.div>
 
@@ -76,7 +44,7 @@ const Projects = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12"
         >
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
