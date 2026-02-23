@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Layout from "./UIComponents/Layout";
 import Trading from "./UIComponents/Trading";
+import ProjectDetail from "./UIComponents/ProjectDetail";
 
 const AppRouter = () => {
   return (
@@ -11,13 +12,17 @@ const AppRouter = () => {
         <Route path="/trading" element={<Trading />} />
 
         {/* Main portfolio routes with Layout */}
-        <Route path="/*" element={
-          <Layout>
-            <Routes>
-              <Route path="/" element={<App />} />
-            </Routes>
-          </Layout>
-        } />
+        <Route
+          path="/*"
+          element={
+            <Layout>
+              <Routes>
+                <Route path="/" element={<App />} />
+                <Route path="/projects/:slug" element={<ProjectDetail />} />
+              </Routes>
+            </Layout>
+          }
+        />
       </Routes>
     </Router>
   );

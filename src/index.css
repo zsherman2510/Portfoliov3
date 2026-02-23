@@ -37,7 +37,7 @@
 
   .brutal-card-hover {
     @apply brutal-card hover:shadow-brutal-lg hover:-translate-x-1 hover:-translate-y-1
-           active:shadow-brutal-active active:translate-x-0.5 active:translate-y-0.5;
+           active:shadow-brutal active:translate-x-0 active:translate-y-0;
   }
 
   .brutal-card-yellow {
@@ -69,7 +69,7 @@
   .brutal-btn-secondary {
     @apply brutal-btn bg-brutal-yellow text-brutal-black
            hover:shadow-brutal-lg hover:-translate-x-1 hover:-translate-y-1
-           active:shadow-brutal-active active:translate-x-0.5 active:translate-y-0.5;
+           active:shadow-brutal active:translate-x-0 active:translate-y-0;
   }
 
   .brutal-btn-outline {
@@ -123,7 +123,7 @@
   /* Tags */
   .brutal-tag {
     @apply inline-block px-3 py-1 bg-brutal-yellow text-brutal-black
-           text-xs font-bold uppercase border-2 border-brutal-black;
+           text-sm font-bold uppercase border-2 border-brutal-black;
   }
 
   .brutal-tag-outline {
