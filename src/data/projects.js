@@ -12,9 +12,16 @@ export const projects = [
         { label: "Web app homepage", src: "/whalor-homepage.png" },
       ],
       mobile: [
-        { label: "Mobile home", src: "", expectedFile: "/whalor-mobile-1.png" },
-        { label: "Flow feed", src: "", expectedFile: "/whalor-mobile-2.png" },
-        { label: "Alert detail", src: "", expectedFile: "/whalor-mobile-3.png" },
+        {
+          label: "Mobile home",
+          src: "/whalor/whalor-01-home.png",
+          expectedFile: "/whalor/whalor-01-home.png",
+        },
+        {
+          label: "Flow feed",
+          src: "/whalor/whalor-02-whale-trades.png",
+          expectedFile: "/whalor/whalor-02-whale-trades.png",
+        },
       ],
     },
     projectUrl: "https://whalor.app",
@@ -237,9 +244,31 @@ export const projects = [
         { label: "Landing page", src: "/leenr-homepage.png" },
       ],
       mobile: [
-        { label: "Onboarding", src: "", expectedFile: "/leenr-mobile-1.png" },
-        { label: "Daily check-in", src: "", expectedFile: "/leenr-mobile-2.png" },
-        { label: "Progress screen", src: "", expectedFile: "/leenr-mobile-3.png" },
+        {
+          label: "Create program",
+          src: "/leenr/leenr-02-create-program.png",
+          expectedFile: "/leenr/leenr-02-create-program.png",
+        },
+        {
+          label: "Programs list",
+          src: "/leenr/leenr-03-programs.png",
+          expectedFile: "/leenr/leenr-03-programs.png",
+        },
+        {
+          label: "Progress overview",
+          src: "/leenr/leenr-04-progress.png",
+          expectedFile: "/leenr/leenr-04-progress.png",
+        },
+        {
+          label: "Plan overview",
+          src: "/leenr/leenr-01-plan.png",
+          expectedFile: "/leenr/leenr-01-plan.png",
+        },
+        {
+          label: "Weight log and momentum",
+          src: "/leenr/leenr-05-plan-overview.png",
+          expectedFile: "/leenr/leenr-05-plan-overview.png",
+        },
       ],
     },
     projectUrl: "https://leenr.app",
