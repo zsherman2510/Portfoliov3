@@ -3,6 +3,7 @@ import App from "./App";
 import Layout from "./UIComponents/Layout";
 import Trading from "./UIComponents/Trading";
 import ProjectDetail from "./UIComponents/ProjectDetail";
+import ResumeBuilder from "./UIComponents/ResumeBuilder";
 
 const AppRouter = () => {
   return (
@@ -19,6 +20,7 @@ const AppRouter = () => {
               <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/projects/:slug" element={<ProjectDetail />} />
+                <Route path="/resume-builder" element={<ResumeBuilder />} />
               </Routes>
             </Layout>
           }

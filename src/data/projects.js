@@ -5,23 +5,16 @@ export const projects = [
     title: "Whalor",
     tagline: "Options flow platform across mobile, web, and backend execution",
     description:
-      "Whalor is a multi-surface trading product focused on unusual options activity. I built it as a full system: mobile app, web app, and a Go backend that handles market logic, auth, and execution services.",
+      "Whalor helps traders make faster, higher-quality decisions by turning noisy options flow into actionable signal. I built it as a full system: web app, mobile app, and a Go backend with PostgreSQL + Clerk powering secure, real-time workflows.",
     imageUrl: "/whalor-homepage.png",
     media: {
       web: [
         { label: "Web app homepage", src: "/whalor-homepage.png" },
       ],
       mobile: [
-        {
-          label: "Mobile home",
-          src: "/whalor/whalor-01-home.png",
-          expectedFile: "/whalor/whalor-01-home.png",
-        },
-        {
-          label: "Flow feed",
-          src: "/whalor/whalor-02-whale-trades.png",
-          expectedFile: "/whalor/whalor-02-whale-trades.png",
-        },
+        { label: "Mobile home", src: "/whalor-mobile-1.png", expectedFile: "/whalor-mobile-1.png" },
+        { label: "Flow feed", src: "/whalor-mobile-2.png", expectedFile: "/whalor-mobile-2.png" },
+        { label: "Alert detail", src: "", expectedFile: "/whalor-mobile-3.png" },
       ],
     },
     projectUrl: "https://whalor.app",
@@ -62,10 +55,10 @@ export const projects = [
         },
       ],
       architecture: [
-        "Mobile app: Expo + React Native + Clerk + Convex for real-time UX.",
-        "Web app: React + Vite + TypeScript + Tailwind + Convex + Clerk.",
+        "Mobile app: React Native + TypeScript client focused on low-latency trading UX.",
+        "Web app: React + Vite + TypeScript + Tailwind for scanner and account workflows.",
         "Backend: Go (Fiber) APIs with websocket support, scheduling, and broker/payment integrations.",
-        "Data + auth flows designed for low-latency reads and secure user-scoped access.",
+        "Data + auth: PostgreSQL persistence with Clerk-based authentication and secure user-scoped access.",
       ],
       responsibilities: [
         "Product strategy and UX system design",
@@ -86,37 +79,36 @@ export const projects = [
     },
 
     stack: [
-      "Expo",
       "React Native",
       "React",
       "Vite",
       "TypeScript",
       "Go",
+      "PostgreSQL",
       "Tailwind CSS",
-      "Convex",
       "Clerk",
       "Fiber",
       "WebSockets",
       "Stripe",
     ],
     highlights: [
-      "Cross-platform product: mobile app + web app + Go backend",
-      "Real-time unusual activity feed and filter workflows",
-      "Explainable market context layered on raw flow",
-      "Production auth, billing, and event infrastructure",
+      "Cross-platform product: web app + mobile app + Go backend",
+      "Paper-trading workflow for strategy testing without real-money execution",
+      "Real-time unusual activity filters and alerts to reduce feed noise",
+      "PostgreSQL + Clerk architecture for secure, user-scoped trading workflows",
     ],
     whatItDoes: [
       {
         title: "Filters noise fast",
-        body: "Ranks and surfaces options flow that deserves immediate attention.",
+        body: "Configurable filters and alert logic surface high-signal flow and suppress low-value noise.",
       },
       {
-        title: "Keeps traders in context",
-        body: "Adds clear rationale so users can quickly understand why a print matters.",
+        title: "Paper trade with confidence",
+        body: "Paper-trading workflows let users test setups and evaluate strategy behavior in live conditions.",
       },
       {
-        title: "Works across surfaces",
-        body: "Mobile and web experiences stay aligned through shared backend logic and data models.",
+        title: "Works across web + mobile",
+        body: "React web and React Native clients stay aligned through shared Go APIs, PostgreSQL data models, and Clerk auth.",
       },
     ],
   },
@@ -127,7 +119,7 @@ export const projects = [
     title: "QuickSign",
     tagline: "Modern e-signature + AI document workflow platform",
     description:
-      "QuickSign is an end-to-end document workflow platform for businesses that need fast e-signatures, automation, and clean billing. It includes a web app and an in-progress mobile app companion.",
+      "QuickSign helps businesses close documents faster by removing signature bottlenecks and manual follow-up. It’s an end-to-end e-sign workflow platform with a web app plus companion mobile experience, backed by secure auth, billing, and auditable data flows.",
     imageUrl: "/quicksign-homepage.png",
     media: {
       web: [
@@ -173,7 +165,7 @@ export const projects = [
       ],
       architecture: [
         "Web platform: Next.js + React + TypeScript + Tailwind.",
-        "Persistence and data access: Prisma.",
+        "Persistence and data access: PostgreSQL + Prisma.",
         "Auth and identity: Clerk.",
         "Billing and payments: Stripe.",
         "Lifecycle intelligence: PostHog analytics + AI-assisted document tooling.",
@@ -200,6 +192,7 @@ export const projects = [
       "React",
       "TypeScript",
       "Tailwind CSS",
+      "PostgreSQL",
       "Prisma",
       "Clerk",
       "Stripe",
@@ -210,10 +203,10 @@ export const projects = [
       "Zustand",
     ],
     highlights: [
-      "Web e-signature platform with AI-assisted document workflows",
-      "Billing + identity + analytics integrations",
-      "In-progress mobile app for document actions on the go",
-      "Conversion-focused UX from document creation to signed completion",
+      "Web-first e-signature platform with companion mobile app",
+      "End-to-end document lifecycle: drafting, routing, signer tracking, completion",
+      "PostgreSQL/Prisma data model with Clerk identity and Stripe billing",
+      "AI-assisted workflows to reduce setup time and accelerate completion",
     ],
     whatItDoes: [
       {
@@ -237,38 +230,16 @@ export const projects = [
     title: "LEENR",
     tagline: "Mobile-first fitness app focused on daily consistency",
     description:
-      "LEENR is a habit-driven fitness app built to improve adherence. The product emphasizes low-friction tracking, clear progress signals, and supportive coaching loops instead of overwhelming users with complexity.",
+      "LEENR helps users stay consistent with fitness by reducing daily friction and making progress easy to understand. It’s a mobile-first product designed around adherence loops, clear feedback, and practical habit-building instead of feature overload.",
     imageUrl: "/leenr-homepage.png",
     media: {
       web: [
         { label: "Landing page", src: "/leenr-homepage.png" },
       ],
       mobile: [
-        {
-          label: "Create program",
-          src: "/leenr/leenr-02-create-program.png",
-          expectedFile: "/leenr/leenr-02-create-program.png",
-        },
-        {
-          label: "Programs list",
-          src: "/leenr/leenr-03-programs.png",
-          expectedFile: "/leenr/leenr-03-programs.png",
-        },
-        {
-          label: "Progress overview",
-          src: "/leenr/leenr-04-progress.png",
-          expectedFile: "/leenr/leenr-04-progress.png",
-        },
-        {
-          label: "Plan overview",
-          src: "/leenr/leenr-01-plan.png",
-          expectedFile: "/leenr/leenr-01-plan.png",
-        },
-        {
-          label: "Weight log and momentum",
-          src: "/leenr/leenr-05-plan-overview.png",
-          expectedFile: "/leenr/leenr-05-plan-overview.png",
-        },
+        { label: "Onboarding", src: "/leenr-mobile-1.png", expectedFile: "/leenr-mobile-1.png" },
+        { label: "Daily check-in", src: "/leenr-mobile-2.png", expectedFile: "/leenr-mobile-2.png" },
+        { label: "Progress screen", src: "/leenr-mobile-3.png", expectedFile: "/leenr-mobile-3.png" },
       ],
     },
     projectUrl: "https://leenr.app",
@@ -302,7 +273,7 @@ export const projects = [
       architecture: [
         "Expo + React Native + TypeScript mobile app.",
         "Expo Router navigation architecture.",
-        "Clerk authentication with Convex-backed app data.",
+        "Clerk authentication with PostgreSQL-backed app data via API services.",
         "Supporting services include payments and secure storage integrations.",
       ],
       responsibilities: [
@@ -325,7 +296,7 @@ export const projects = [
       "React Native",
       "TypeScript",
       "Expo Router",
-      "Convex",
+      "PostgreSQL",
       "Clerk",
       "Stripe",
       "Zustand",
