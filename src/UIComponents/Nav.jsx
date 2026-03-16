@@ -22,11 +22,20 @@ const Navigation = () => {
         </motion.div>
 
         {/* Navigation Links */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-3 md:gap-6 flex-wrap justify-end">
           <NavLink onClick={() => scrollToSection("projects")}>Projects</NavLink>
           <NavLink onClick={() => scrollToSection("experience")}>Experience</NavLink>
 
-          {/* Resume Button */}
+          <motion.a
+            href="/resume-builder"
+            className="brutal-btn-primary"
+            whileHover={{ y: -2, x: -2 }}
+            whileTap={{ y: 1, x: 1 }}
+            transition={{ duration: 0.1 }}
+          >
+            Resume Builder
+          </motion.a>
+
           <motion.a
             href="/resume_2025_pdf.pdf"
             target="_blank"
@@ -36,7 +45,7 @@ const Navigation = () => {
             whileTap={{ y: 1, x: 1 }}
             transition={{ duration: 0.1 }}
           >
-            Resume
+            Current Resume
           </motion.a>
         </div>
       </div>

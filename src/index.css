@@ -164,6 +164,33 @@
   }
 }
 
+@media print {
+  nav,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  .brutal-section {
+    padding: 0 !important;
+  }
+
+  .brutal-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .resume-preview {
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+}
+
 @layer utilities {
   /* Stacked shadow effect */
   .brutal-stacked {

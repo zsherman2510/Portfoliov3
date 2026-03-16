@@ -1,0 +1,56 @@
+ZAVION SHERMAN
+Full-Stack Engineer
+zavionsherman.com | Phoenix, AZ
+
+SUMMARY
+Senior Full-Stack Engineer with 6+ years delivering customer-facing and internal SaaS products in fintech and healthcare. Experienced across frontend architecture, backend/API integration, performance optimization, testing strategy, and production release quality using React, Next.js, Node.js, .NET, SQL/PostgreSQL, and AI-assisted development workflows.
+
+SKILLS
+React, Next.js, TypeScript, JavaScript, Node.js, REST APIs, API Integration, Microservices, C#, .NET Core, SQL, PostgreSQL, Performance Optimization, Jest, React Testing Library, Agile/Scrum, WCAG 2.1 AA, AI-Assisted Development
+
+EXPERIENCE
+Engineer II (Full-Stack) — American Express | Sep 2022 - Present
+- Owned and shipped key cardmember onboarding journeys, including activation flow, registration flow, and account servicing flows (remove card and add account user experiences).
+- Built frontend + backend-integrated features for acquisition and servicing experiences, connecting UI states to secure REST APIs with robust validation and fallback handling.
+- Implemented API orchestration patterns to combine profile, eligibility, and account service responses into cohesive user flows with lower failure rates.
+- Applied performance optimizations (code splitting, lazy loading, smarter data-fetching strategies) to improve load speed and reduce client bundle impact.
+- Contributed to AI-assisted feature development workflows (prompt-driven generation, iteration, and validation) to accelerate delivery and improve implementation quality.
+- Wrote and maintained unit/integration coverage with Jest + React Testing Library for high-traffic releases and regression protection.
+- Partnered with product, design, and platform stakeholders to translate compliance-heavy banking requirements into production-ready full-stack solutions.
+
+Mid-Level Full-Stack Engineer (Consultant) — Tango (Home Healthcare) | Aug 2021 - Sep 2022
+- Built Oasis (Outcome and Assessment Information Set) workflows used in home healthcare operations to digitize critical patient-assessment documentation and reduce paper processes.
+- Developed provider-facing portal features that enabled teams to track patient visits, review care notes, and monitor key visit data in one operational system.
+- Implemented referral intake and submission experiences across provider workflows, improving throughput and supporting measurable revenue impact.
+- Built and integrated REST APIs + microservices to connect patient records, scheduling context, and visit documentation with reliable data flow across systems.
+- Improved role-based access and workflow routing so clinical and operational users could see the right patient information at the right step.
+- Integrated third-party services and modernized core UI modules with TypeScript + React to improve maintainability, performance, and release velocity.
+- Partnered with product and operations teams to translate home-health requirements into scalable, compliant software experiences.
+
+Software Engineer II — B2Gnow | Aug 2019 - Aug 2021
+- Maintained and enhanced core application using C#, .NET, SQL, HTML/CSS; contributed to ~20% retention increase.
+- Managed L1/L2 escalations and production support to maintain platform stability.
+- Built custom SQL/SSRS reports to improve customer reporting and decision-making.
+- Collaborated cross-functionally to ship customer-driven features.
+
+PROJECTS
+Whalor (whalor.app)
+Tech: React Native, TypeScript, React (Web), Go (Backend), PostgreSQL, Clerk Auth
+- Built Whalor as both a web application and mobile application, with Go backend services and PostgreSQL powering market-data and user workflows.
+- Implemented paper-trading workflows so users can simulate trades and evaluate strategy performance without placing real-money orders.
+- Built configurable filters and alerting features to help users cut through options-flow noise and focus on high-signal setups.
+- Implemented secure Clerk-based authentication and user-scoped data access across React web and React Native clients.
+
+QuickSign (quicksign.it)
+Tech: Next.js, React, TypeScript, PostgreSQL, Prisma, Clerk, Stripe, Expo (Mobile)
+- Built QuickSign as a web-first e-signature platform with a companion mobile application for on-the-go document actions.
+- Implemented end-to-end document lifecycle workflows, including drafting, signature routing, signer status tracking, and completion handling.
+- Integrated Clerk authentication, Stripe billing, and backend data models to support secure, auditable business workflows.
+- Shipped AI-assisted document tooling to reduce manual drafting time and improve workflow speed.
+
+LEENR (leenr.app)
+Tech: React Native, Expo, TypeScript, PostgreSQL, Clerk, API Services
+- Built LEENR as a mobile-first fitness application focused on consistency, adherence, and low-friction daily tracking.
+- Implemented check-in, progress, and habit-loop features that help users track workouts and health behaviors over time.
+- Designed secure auth and synced data experiences for personalized, reliable user sessions.
+- Iterated onboarding and retention-focused UX flows to improve repeat engagement and long-term usage.
