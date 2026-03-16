@@ -27,17 +27,7 @@ const Navigation = () => {
           <NavLink onClick={() => scrollToSection("experience")}>Experience</NavLink>
 
           <motion.a
-            href="/resume-builder"
-            className="brutal-btn-primary"
-            whileHover={{ y: -2, x: -2 }}
-            whileTap={{ y: 1, x: 1 }}
-            transition={{ duration: 0.1 }}
-          >
-            Resume Builder
-          </motion.a>
-
-          <motion.a
-            href="/resume_2025_pdf.pdf"
+            href="/zavion_resume_latest.docx"
             target="_blank"
             rel="noopener noreferrer"
             className="brutal-btn-secondary"
