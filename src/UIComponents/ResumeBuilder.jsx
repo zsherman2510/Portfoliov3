@@ -7,7 +7,7 @@ const defaultResume = {
     name: "Zavion Sherman",
     title: "Full-Stack Engineer",
     website: "zavionsherman.com",
-    email: "Shermanzavion@gmail.com",
+    email: "",
     phone: "",
     location: "Phoenix, AZ",
     linkedin: "",
