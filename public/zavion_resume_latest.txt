@@ -6,7 +6,7 @@ SUMMARY
 Senior Full-Stack Engineer with 6+ years delivering customer-facing and internal SaaS products in fintech and healthcare. Experienced across frontend architecture, backend/API integration, performance optimization, testing strategy, and production release quality using React, Next.js, Node.js, .NET, SQL/PostgreSQL, and AI-assisted development workflows.
 
 SKILLS
-React, Next.js, TypeScript, JavaScript, Node.js, REST APIs, API Integration, Microservices, C#, .NET Core, SQL, PostgreSQL, Performance Optimization, Jest, React Testing Library, Agile/Scrum, WCAG 2.1 AA, AI-Assisted Development
+React, Next.js, TypeScript, JavaScript, React Native, Node.js, Go, REST APIs, API Integration, Microservices, C#, .NET Core, SQL, PostgreSQL, Performance Optimization, Jest, React Testing Library, Agile/Scrum, WCAG 2.1 AA, AI-Assisted Development
 
 EXPERIENCE
 Engineer II (Full-Stack) — American Express | Sep 2022 - Present
@@ -35,11 +35,11 @@ Software Engineer II — B2Gnow | Aug 2019 - Aug 2021
 
 PROJECTS
 Whalor (whalor.app)
-Tech: React Native, TypeScript, React (Web), Go (Backend), PostgreSQL, Clerk Auth
-- Built Whalor as both a web application and mobile application, with Go backend services and PostgreSQL powering market-data and user workflows.
-- Implemented paper-trading workflows so users can simulate trades and evaluate strategy performance without placing real-money orders.
-- Built configurable filters and alerting features to help users cut through options-flow noise and focus on high-signal setups.
-- Implemented secure Clerk-based authentication and user-scoped data access across React web and React Native clients.
+Tech: React Native (Expo), TypeScript, React (Web), Go (Backend), PostgreSQL, Clerk Auth
+- Founded and built Whalor, a 0DTE options-alert product for iOS and web that detects same-day setups on SPY, QQQ, IWM, and selected liquid tickers in real time and delivers each one as a push alert with the exact contract, entry, and profit targets.
+- Built the Go backend (REST APIs, background workers, PostgreSQL) that streams market data, scans for setups, publishes alerts, and grades every alert's outcome, publishing wins and losses to a public record.
+- Shipped a React Native (Expo) iOS app with over-the-air updates and a React web app on one shared API, with Clerk authentication and user-scoped data access.
+- Built a research and backtesting pipeline that tests strategies and exits on historical options quote data, using pre-registered rules and train/holdout splits before anything goes live.
 
 QuickSign (quicksign.it)
 Tech: Next.js, React, TypeScript, PostgreSQL, Prisma, Clerk, Stripe, Expo (Mobile)
