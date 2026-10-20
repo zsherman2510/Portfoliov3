@@ -1,14 +1,9 @@
 import { useState } from "react";
-import { experience, skills, whalor } from "../content";
+import { experience, skills } from "../content";
 import { Reveal, RiseText, SectionLabel } from "./motion";
 
-// Where each skill shows up: resume roles (from bullet tags) plus Whalor's stack.
-const WHALOR_SKILLS = new Set(["react", "ts", "rn", "go", "sql", "auth"]);
-const usedAt = (id) => {
-  const places = experience.filter((e) => e.bullets.some((b) => b.tags.includes(id))).map((e) => e.company);
-  if (WHALOR_SKILLS.has(id)) places.push(whalor.name);
-  return places;
-};
+// Where each skill shows up: the roles whose résumé bullets are tagged with it.
+const usedAt = (id) => experience.filter((e) => e.bullets.some((b) => b.tags.includes(id))).map((e) => e.company);
 const groups = [...new Set(skills.map((s) => s.group))];
 
 export default function Skills() {
@@ -18,9 +13,9 @@ export default function Skills() {
       <div className="wrap">
         <SectionLabel index="04">Toolkit</SectionLabel>
         <h2 className="mt-10 max-w-4xl font-display text-5xl leading-[1] tracking-tight md:text-7xl">
-          <RiseText text="Frontend depth," /> <span className="italic"><RiseText text="full-stack range." delay={0.15} /></span>
+          <RiseText text="Full stack," /> <span className="italic"><RiseText text="AI native." delay={0.15} /></span>
         </h2>
-        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-5">
+        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {groups.map((g, gi) => (
             <Reveal key={g} delay={gi * 0.06} className="bg-ink p-6">
               <p className="eyebrow mb-6">{g}</p>

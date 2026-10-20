@@ -71,9 +71,8 @@ export default function Hero() {
 
         <div className="mt-10 grid gap-8 border-t border-line pt-6 md:grid-cols-12">
           <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8, duration: 0.9, ease }} className="text-xl leading-snug text-paper md:col-span-6 md:text-2xl">
-            Senior full-stack engineer. Six years shipping fintech and healthcare products at{" "}
-            <span className="italic font-display text-[1.15em]">American Express</span> and{" "}
-            <span className="italic font-display text-[1.15em]">Tango</span>, and the builder of{" "}
+            Senior software engineer, full stack &amp; AI. Seven years shipping fintech, healthcare and SaaS products at{" "}
+            <span className="italic font-display text-[1.15em]">American Express</span>, Tango and B2Gnow, and the founder of{" "}
             <a href="#work" className="underline decoration-signal decoration-1 underline-offset-4">Whalor</a>.
           </motion.p>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }} className="flex flex-wrap items-end gap-3 md:col-span-6 md:justify-end">

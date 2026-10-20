@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { experience, profile, skills } from "../content";
+import { education, experience, profile, skills } from "../content";
 import { ease, Reveal, RiseText } from "./motion";
 
 // Timeline spans Aug 2019 → now, in months.
@@ -8,11 +8,7 @@ const START = { y: 2019, m: 7 };
 const monthsFrom = (y, m) => (y - START.y) * 12 + (m - START.m);
 const now = new Date();
 const TOTAL = monthsFrom(now.getFullYear(), now.getMonth());
-const SPANS = {
-  b2gnow: [monthsFrom(2019, 7), monthsFrom(2021, 7)],
-  tango: [monthsFrom(2021, 7), monthsFrom(2022, 8)],
-  amex: [monthsFrom(2022, 8), TOTAL],
-};
+const SPANS = Object.fromEntries(experience.map((e) => [e.id, [monthsFrom(...e.start), e.end ? monthsFrom(...e.end) : TOTAL]]));
 const YEARS = Array.from({ length: now.getFullYear() - 2019 }, (_, i) => 2020 + i);
 
 const usedSkillIds = new Set(experience.flatMap((e) => e.bullets.flatMap((b) => b.tags)));
@@ -48,7 +44,7 @@ export default function Resume() {
 
         <div className="mt-10 flex flex-wrap items-end justify-between gap-8">
           <h2 className="max-w-4xl font-display text-5xl leading-[1] tracking-tight md:text-7xl lg:text-8xl">
-            <RiseText text="Six years, three teams," /> <span className="italic"><RiseText text="one through-line." delay={0.2} /></span>
+            <RiseText text="Seven years of shipping," /> <span className="italic"><RiseText text="one through-line." delay={0.2} /></span>
           </h2>
           <a href={profile.resumePdf} target="_blank" rel="noreferrer" className="rounded-full bg-ink px-6 py-3 text-sm text-paper transition-transform hover:-translate-y-0.5">
             Download PDF ↗
@@ -57,7 +53,7 @@ export default function Resume() {
 
         {/* Timeline */}
         <Reveal className="mt-16">
-          <div className="relative h-16" role="tablist" aria-label="Roles by date">
+          <div className="relative h-[7.5rem]" role="tablist" aria-label="Roles by date">
             {experience.slice().reverse().map((e) => {
               const [a, b] = SPANS[e.id];
               const on = e.id === active;
@@ -70,8 +66,8 @@ export default function Resume() {
                   aria-selected={on}
                   aria-controls="role-panel"
                   onClick={() => setActive(e.id)}
-                  className={`absolute top-0 flex h-12 items-center overflow-hidden rounded-full border px-4 text-left text-xs transition-all duration-500 ${on ? "border-ink bg-ink text-paper" : "border-ink/20 bg-transparent text-ink hover:border-ink"} ${dim ? "opacity-30" : ""}`}
-                  style={{ left: `${(a / TOTAL) * 100}%`, width: `calc(${((b - a) / TOTAL) * 100}% - 6px)` }}
+                  className={`absolute flex h-12 items-center overflow-hidden rounded-full border px-4 text-left text-xs transition-all duration-500 ${on ? "border-ink bg-ink text-paper" : "border-ink/20 bg-transparent text-ink hover:border-ink"} ${dim ? "opacity-30" : ""}`}
+                  style={{ top: e.lane ? "3.75rem" : 0, left: `${(a / TOTAL) * 100}%`, width: `calc(${((b - a) / TOTAL) * 100}% - 6px)` }}
                 >
                   <span className="truncate font-medium">{e.company}</span>
                 </button>
@@ -139,6 +135,7 @@ export default function Resume() {
                 <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-ink/55">{job.period} · {job.domain}</p>
                 <h3 className="mt-3 font-display text-4xl leading-tight md:text-5xl">{job.title}</h3>
                 <p className="mt-3 text-lg text-ink/70">{job.blurb}</p>
+                <p className="mt-3 font-mono text-xs leading-relaxed text-ink/55">Tech: {job.tech}</p>
                 <ul className="mt-8">
                   {job.bullets.map((b, i) => {
                     const hit = !skill || b.tags.includes(skill);
@@ -166,6 +163,13 @@ export default function Resume() {
               </motion.div>
             </AnimatePresence>
           </div>
+        </div>
+        <div className="mt-20 grid gap-4 border-t border-ink/15 pt-6 md:grid-cols-12">
+          <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-ink/55 md:col-span-4">Education</p>
+          <p className="md:col-span-8">
+            <span className="font-display text-3xl">{education.school}</span>
+            <span className="mt-1 block text-ink/65">{education.detail} · {education.place} · {education.period}</span>
+          </p>
         </div>
       </div>
     </section>

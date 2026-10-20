@@ -3,11 +3,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { whalor } from "../content";
 import { Reveal, RiseText, SectionLabel } from "./motion";
 
-function Phone({ src, alt, style, className = "" }) {
+function Phone({ src, alt, style, kind = "phone", className = "" }) {
+  const card = kind === "card";
   return (
-    <motion.figure style={style} className={`relative w-[44%] max-w-[260px] shrink-0 ${className}`}>
-      <div className="overflow-hidden rounded-[2.2rem] border border-white/10 bg-black p-1.5 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)]">
-        <img src={src} alt={alt} loading="lazy" className="block w-full rounded-[1.8rem]" />
+    <motion.figure style={style} className={`relative shrink-0 ${card ? "w-[52%] max-w-[340px]" : "w-[44%] max-w-[260px]"} ${className}`}>
+      <div className={`overflow-hidden border border-white/10 bg-black shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] ${card ? "rounded-[1.6rem]" : "rounded-[2.2rem] p-1.5"}`}>
+        <img src={src} alt={alt} loading="lazy" className={`block w-full ${card ? "" : "rounded-[1.8rem]"}`} />
       </div>
     </motion.figure>
   );
@@ -55,12 +56,24 @@ export default function Work() {
           </motion.a>
           <div className="pointer-events-none relative -mt-[18%] flex justify-end gap-4 pr-2 md:-mt-[22%] md:gap-8 md:pr-10">
             {phones.map((shot, i) => (
-              <Phone key={shot.src} src={shot.src} alt={shot.alt} style={{ y: i ? phoneB : phoneA }} className={i ? "hidden sm:block" : ""} />
+              <Phone key={shot.src} src={shot.src} alt={shot.alt} kind={shot.kind} style={{ y: i ? phoneB : phoneA }} className={i ? "hidden sm:block self-end" : ""} />
             ))}
           </div>
         </div>
 
-        <div className="mt-24 grid gap-12 md:mt-48 md:grid-cols-12">
+        <dl className="mt-24 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line md:mt-44 md:grid-cols-3 lg:grid-cols-6">
+          {whalor.metrics.map((m, i) => (
+            <Reveal key={m.label} delay={i * 0.05} className="bg-ink p-5">
+              <dt className="sr-only">{m.label}</dt>
+              <dd>
+                <span className="block font-display text-5xl leading-none">{m.value}</span>
+                <span className="mt-2 block text-xs text-mute">{m.label}</span>
+              </dd>
+            </Reveal>
+          ))}
+        </dl>
+
+        <div className="mt-20 grid gap-12 md:mt-28 md:grid-cols-12">
           <Reveal className="md:col-span-5">
             <p className="text-2xl leading-snug text-paper md:text-3xl">{whalor.intro}</p>
             <ul className="mt-8 flex flex-wrap gap-2" aria-label="Tech stack">
