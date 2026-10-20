@@ -1,6 +1,6 @@
 ZAVION SHERMAN
 Full-Stack Engineer
-zavionsherman.com | Phoenix, AZ
+zavionsherman.com | Shermanzavion@gmail.com | Phoenix, AZ
 
 SUMMARY
 Senior Full-Stack Engineer with 6+ years delivering customer-facing and internal SaaS products in fintech and healthcare. Experienced across frontend architecture, backend/API integration, performance optimization, testing strategy, and production release quality using React, Next.js, Node.js, .NET, SQL/PostgreSQL, and AI-assisted development workflows.
