@@ -102,19 +102,18 @@ export const whalor = {
   url: "https://whalor.app",
   year: "2025 — Present",
   role: "Founder · Product · Full-stack engineering",
-  tagline: "Real-time options alerts, on web and iPhone.",
+  tagline: "0DTE options alerts that publish every outcome, wins and losses.",
   intro:
-    "Whalor turns a firehose of options activity into a short list of setups worth a look, with the context to understand them in seconds. I designed and built the whole system: the React web app, the React Native iOS app, and the Go services and PostgreSQL data behind them.",
+    "Whalor watches SPY, QQQ, IWM and selected liquid tickers for qualified same-day options setups. When one fires, members get the exact contract, entry and profit targets on their phone, and the outcome is published afterwards either way. I designed and built the whole system: the React Native iOS app, the React web app, and the Go services and PostgreSQL data behind them.",
   stack: ["React Native", "TypeScript", "React", "Go", "PostgreSQL", "Clerk Auth"],
   highlights: [
-    { title: "Two clients, one system", text: "A React web app and a React Native mobile app built on the same Go backend services and PostgreSQL, so both stay in sync." },
-    { title: "Signal over noise", text: "Configurable filters and real-time alerts that cut through options-flow noise and surface high-signal setups." },
-    { title: "Practice without risk", text: "Paper-trading workflows let users simulate ideas and measure how a strategy performs without placing real orders." },
-    { title: "Secure by default", text: "Clerk-based authentication and user-scoped data access across the web and mobile clients." },
+    { title: "Alerts while the window is open", text: "Real-time setup detection and push alerts that carry the exact contract, entry and profit targets, delivered while the entry is still actionable." },
+    { title: "A public, graded record", text: "Every published alert is graded and its result posted, losses included, so members can judge the product on its record rather than on promises." },
+    { title: "Two clients, one system", text: "A React Native iOS app and a React web app on the same Go backend services and PostgreSQL, so both stay in sync." },
+    { title: "Secure by default", text: "Clerk-based authentication and user-scoped data access across the mobile and web clients." },
   ],
   shots: [
-    { src: "/whalor-homepage.png", alt: "Whalor website hero: live unusual options alerts", kind: "web" },
-    { src: "/whalor-mobile-1.png", alt: "Whalor iOS app home: market status, paper portfolio, earnings and news", kind: "phone" },
-    { src: "/whalor-mobile-2.png", alt: "Whalor iOS app whale trades: large options trades filtered by size", kind: "phone" },
+    { src: "/whalor/web-home-2026-10.png", alt: "Whalor website, October 2026: 0DTE options alerts that post their losses", kind: "web" },
+    { src: "/whalor/ios-welcome-2026-10.png", alt: "Whalor iOS app, October 2026: welcome screen with an example graded setup", kind: "phone" },
   ],
 };

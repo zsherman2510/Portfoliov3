@@ -54,8 +54,9 @@ export default function Work() {
             <img src={web.src} alt={web.alt} loading="lazy" className="block w-full transition-transform duration-[1.2s] ease-out group-hover:scale-[1.02]" />
           </motion.a>
           <div className="pointer-events-none relative -mt-[18%] flex justify-end gap-4 pr-2 md:-mt-[22%] md:gap-8 md:pr-10">
-            <Phone src={phones[0].src} alt={phones[0].alt} style={{ y: phoneA }} />
-            <Phone src={phones[1].src} alt={phones[1].alt} style={{ y: phoneB }} className="hidden sm:block" />
+            {phones.map((shot, i) => (
+              <Phone key={shot.src} src={shot.src} alt={shot.alt} style={{ y: i ? phoneB : phoneA }} className={i ? "hidden sm:block" : ""} />
+            ))}
           </div>
         </div>
 
